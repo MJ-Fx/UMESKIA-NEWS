@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political News - Umeskia News</title>
+    <meta name="description" content="Latest political news, elections, government policies, and political analysis from Umeskia News">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body class="politics-page">
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="../../index.html">
+                    <img src="../../images/logo.png" alt="Umeskia News Logo" class="logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="politics.html">Politics</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg><!-- Search icon --></svg>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search political news...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Political News Hero Banner -->
+    <section class="political-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Political Pulse</h1>
+                <p>In-depth coverage of elections, policies, and government affairs</p>
+                <div class="election-countdown">
+                    <h3>Next General Election:</h3>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-number days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Political Party Tabs -->
+    <section class="party-tabs-section">
+        <div class="container">
+            <div class="party-tabs">
+                <button class="party-tab active" data-party="all">All Parties</button>
+                <button class="party-tab" data-party="democrat">Democrat</button>
+                <button class="party-tab" data-party="republican">Republican</button>
+                <button class="party-tab" data-party="independent">Independent</button>
+                <button class="party-tab" data-party="green">Green</button>
+                <button class="party-tab" data-party="libertarian">Libertarian</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container main-content political-main">
+        <!-- Featured Political Article -->
+        <section class="featured-article political-featured">
+            <article>
+                <div class="featured-image">
+                    <img src="../../images/articles/politics-featured.jpg" alt="Featured Political News">
+                    <span class="category-badge politics">Politics</span>
+                    <div class="party-affiliation democrat">Democrat</div>
+                </div>
+                <div class="featured-content">
+                    <h1><a href="../../article/political-article-1.html">President Announces Sweeping Climate Policy Reform</a></h1>
+                    <p class="excerpt">In a landmark speech, the President unveiled a comprehensive climate policy package that aims to reduce carbon emissions by 50% by 2030, drawing both praise and criticism across party lines.</p>
+                    <div class="article-meta">
+                        <span class="author">By Jane Wilson</span>
+                        <span class="date">3 hours ago</span>
+                        <span class="comments">42 Comments</span>
+                    </div>
+                    <div class="sentiment-meter">
+                        <div class="sentiment-label">Public Sentiment:</div>
+                        <div class="meter-bar">
+                            <div class="meter-fill positive" style="width: 65%"></div>
+                            <div class="meter-fill negative" style="width: 35%"></div>
+                        </div>
+                        <div class="meter-labels">
+                            <span>Positive (65%)</span>
+                            <span>Negative (35%)</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Political News Grid -->
+        <section class="news-grid political-grid">
+            <div class="grid-header">
+                <h2>Latest Political News</h2>
+                <div class="filter-options">
+                    <select id="politicalFilter">
+                        <option value="all">All Stories</option>
+                        <option value="elections">Elections</option>
+                        <option value="policy">Policy</option>
+                        <option value="international">International</option>
+                        <option value="scandal">Scandals</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <article class="news-card political-card" data-party="republican" data-category="policy">
+                    <div class="card-image">
+                        <img src="../../images/articles/politics-1.jpg" alt="Political News">
+                        <span class="category-badge politics">Politics</span>
+                        <div class="party-affiliation republican">Republican</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/political-article-2.html">Senate Republicans Block Voting Rights Bill in Late-Night Session</a></h3>
+                        <p class="excerpt">The bill, which would have expanded early voting and mail-in ballot access, failed to overcome a Republican filibuster despite Democratic efforts.</p>
+                        <div class="article-meta">
+                            <span class="author">By Robert Chen</span>
+                            <span class="date">7 hours ago</span>
+                        </div>
+                        <div class="vote-tracker">
+                            <div class="vote-for">For: 48</div>
+                            <div class="vote-against">Against: 52</div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="news-card political-card" data-party="democrat" data-category="elections">
+                    <div class="card-image">
+                        <img src="../../images/articles/politics-2.jpg" alt="Political News">
+                        <span class="category-badge politics">Politics</span>
+                        <div class="party-affiliation democrat">Democrat</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/political-article-3.html">Democratic Candidates Lead in Key Swing State Polls</a></h3>
+                        <p class="excerpt">New polling data shows Democratic candidates with a 5-8 point lead in three crucial swing states ahead of the midterm elections.</p>
+                        <div class="article-meta">
+                            <span class="author">By Angela Martinez</span>
+                            <span class="date">10 hours ago</span>
+                        </div>
+                        <div class="poll-data">
+                            <div class="poll-bar">
+                                <div class="poll-fill democrat" style="width: 52%">52%</div>
+                                <div class="poll-fill republican" style="width: 44%">44%</div>
+                                <div class="poll-fill other" style="width: 4%">4%</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- More political articles would follow this pattern -->
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMorePolitics">Load More Political News</button>
+            </div>
+        </section>
+
+        <!-- Political Debate Section -->
+        <section class="political-debate">
+            <h2 class="section-title">Today's Debate</h2>
+            <div class="debate-container">
+                <div class="debate-topic">
+                    <h3>Should the Federal Minimum Wage Be Increased to $15/Hour?</h3>
+                    <p>Experts from both sides weigh in on this contentious economic policy debate.</p>
+                </div>
+                <div class="debate-sides">
+                    <div class="debate-side pro">
+                        <div class="debater-header">
+                            <img src="../../images/politics/pro-debater.jpg" alt="Pro Debater">
+                            <h4>Sen. Elizabeth Warren</h4>
+                            <span class="debater-title">Democrat, Massachusetts</span>
+                        </div>
+                        <div class="debate-points">
+                            <ul>
+                                <li>Would lift 900,000 Americans out of poverty</li>
+                                <li>Stimulates local economies as workers spend more</li>
+                                <li>Adjusted for inflation, minimum wage should be over $20 today</li>
+                            </ul>
+                        </div>
+                        <button class="vote-button pro-vote">I Agree (68%)</button>
+                    </div>
+                    <div class="vs-circle">VS</div>
+                    <div class="debate-side con">
+                        <div class="debater-header">
+                            <img src="../../images/politics/con-debater.jpg" alt="Con Debater">
+                            <h4>Sen. Mitch McConnell</h4>
+                            <span class="debater-title">Republican, Kentucky</span>
+                        </div>
+                        <div class="debate-points">
+                            <ul>
+                                <li>Would cost 1.4 million jobs according to CBO</li>
+                                <li>Harms small businesses still recovering from pandemic</li>
+                                <li>Better addressed at state level based on local economies</li>
+                            </ul>
+                        </div>
+                        <button class="vote-button con-vote">I Agree (32%)</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Political Sidebar -->
+    <aside class="sidebar political-sidebar">
+        <!-- Election Map Widget -->
+        <div class="sidebar-widget election-map-widget">
+            <h3>2024 Election Map</h3>
+            <div class="map-container">
+                <img src="../../images/politics/election-map.png" alt="2024 Election Map" class="election-map">
+                <div class="map-legend">
+                    <div class="legend-item"><span class="democrat"></span> Democrat</div>
+                    <div class="legend-item"><span class="republican"></span> Republican</div>
+                    <div class="legend-item"><span class="swing"></span> Swing State</div>
+                </div>
+            </div>
+            <div class="electoral-count">
+                <div class="electoral-democrat">
+                    <span class="count">248</span>
+                    <span class="label">Electoral Votes</span>
+                </div>
+                <div class="electoral-republican">
+                    <span class="count">235</span>
+                    <span class="label">Electoral Votes</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Politician Tracker -->
+        <div class="sidebar-widget politician-tracker">
+            <h3>Track Politicians</h3>
+            <div class="tracker-search">
+                <input type="text" placeholder="Search politicians...">
+                <button>Search</button>
+            </div>
+            <div class="featured-politicians">
+                <div class="politician-card">
+                    <img src="../../images/politics/politician-1.jpg" alt="Politician">
+                    <div class="politician-info">
+                        <h4>Alexandria Ocasio-Cortez</h4>
+                        <span class="party democrat">Democrat</span>
+                        <span class="position">Representative, NY-14</span>
+                    </div>
+                </div>
+                <!-- More politician cards -->
+            </div>
+        </div>
+        
+        <!-- Political Poll Widget -->
+        <div class="sidebar-widget poll-widget">
+            <h3>Latest Poll</h3>
+            <div class="poll-question">Do you approve of the President's job performance?</div>
+            <div class="poll-results">
+                <div class="poll-option approve">
+                    <span class="poll-label">Approve</span>
+                    <span class="poll-percent">48%</span>
+                    <div class="poll-bar" style="width: 48%"></div>
+                </div>
+                <div class="poll-option disapprove">
+                    <span class="poll-label">Disapprove</span>
+                    <span class="poll-percent">49%</span>
+                    <div class="poll-bar" style="width: 49%"></div>
+                </div>
+                <div class="poll-option unsure">
+                    <span class="poll-label">Unsure</span>
+                    <span class="poll-percent">3%</span>
+                    <div class="poll-bar" style="width: 3%"></div>
+                </div>
+            </div>
+            <div class="poll-meta">
+                <span class="poll-sample">1,200 likely voters</span>
+                <span class="poll-date">June 15-17, 2024</span>
+            </div>
+            <button class="poll-vote-button">Take Our Poll</button>
+        </div>
+        
+        <!-- Political Advertisement -->
+        <div class="sidebar-widget ad-widget political-ad">
+            <h3>Advertisement</h3>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="../../images/ads/political-ad.jpg" alt="Political Advertisement">
+                <span class="ad-label">Paid for by Citizens for Democracy</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column about-column">
+                    <img src="images/logo-white.png" alt="Umeskia News Logo" class="footer-logo">
+                    <p>Umeskia News is dedicated to bringing you the latest, most accurate news from Kenya and around the world. We inform, educate, and empower our readers with timely reporting and in-depth analysis.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg><!-- Facebook icon --></svg></a>
+                        <a href="#" aria-label="Twitter"><svg><!-- Twitter icon --></svg></a>
+                        <a href="#" aria-label="Instagram"><svg><!-- Instagram icon --></svg></a>
+                        <a href="#" aria-label="YouTube"><svg><!-- YouTube icon --></svg></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column links-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Advertise With Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column categories-column">
+                    <h4>News Categories</h4>
+                    <ul>
+                        <li><a href="categories/politics.html">Politics</a></li>
+                        <li><a href="categories/technology.html">Technology</a></li>
+                        <li><a href="categories/business.html">Business</a></li>
+                        <li><a href="categories/sports.html">Sports</a></li>
+                        <li><a href="categories/entertainment.html">Entertainment</a></li>
+                        <li><a href="#">Health</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column contact-column">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p>123 News Street<br>Media City, MC 10001</p>
+                        <p>Email: <a href="mailto:info@umeskianews.com">info@umeskianews.com</a></p>
+                        <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Umeskia News. All Rights Reserved.</p>
+                <div class="footer-nav">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Politics-specific JavaScript -->
+    <script src="politics.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

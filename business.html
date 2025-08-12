@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business News - Umeskia News</title>
+    <meta name="description" content="Latest business news, market updates, financial reports and economic analysis from Umeskia News">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body class="business-page">
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../../images/logo.png" alt="Umeskia News Logo" class="logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li class="active"><a href="business.html">Business</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg><!-- Search icon --></svg>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search business news...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Business Hero with Market Ticker -->
+    <section class="business-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Markets & Money</h1>
+                <p>Financial insights, market trends, and business intelligence</p>
+            </div>
+        </div>
+        <div class="market-ticker">
+            <div class="ticker-container">
+                <div class="ticker-item">
+                    <span class="market-name">DOW</span>
+                    <span class="market-value">34,256.12</span>
+                    <span class="market-change positive">+1.24%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="market-name">S&P 500</span>
+                    <span class="market-value">4,345.67</span>
+                    <span class="market-change positive">+0.89%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="market-name">NASDAQ</span>
+                    <span class="market-value">13,789.34</span>
+                    <span class="market-change negative">-0.32%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="market-name">OIL</span>
+                    <span class="market-value">$78.45</span>
+                    <span class="market-change positive">+2.15%</span>
+                </div>
+                <div class="ticker-item">
+                    <span class="market-name">GOLD</span>
+                    <span class="market-value">$1,945.60</span>
+                    <span class="market-change negative">-0.45%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Category Navigation -->
+    <section class="business-categories">
+        <div class="container">
+            <div class="category-nav">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="markets">Markets</button>
+                <button class="category-btn" data-category="economy">Economy</button>
+                <button class="category-btn" data-category="companies">Companies</button>
+                <button class="category-btn" data-category="personal-finance">Personal Finance</button>
+                <button class="category-btn" data-category="startups">Startups</button>
+                <button class="category-btn" data-category="trade">Trade</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container main-content business-main">
+        <!-- Featured Business Article -->
+        <section class="featured-article business-featured">
+            <article>
+                <div class="featured-image">
+                    <img src="../../images/articles/business-featured.jpg" alt="Featured Business News">
+                    <span class="category-badge business">Business</span>
+                    <div class="business-category-label markets">Markets</div>
+                </div>
+                <div class="featured-content">
+                    <h1><a href="../../article/business-article-1.html">Federal Reserve Holds Rates Steady But Hints at Future Increases</a></h1>
+                    <p class="excerpt">The Federal Reserve maintained interest rates at current levels but signaled potential hikes later this year as inflation remains stubbornly high, causing mixed reactions in financial markets.</p>
+                    <div class="article-meta">
+                        <span class="author">By Robert Johnson</span>
+                        <span class="date">3 hours ago</span>
+                        <span class="comments">42 Comments</span>
+                    </div>
+                    <div class="market-impact">
+                        <h4>Market Reaction:</h4>
+                        <div class="impact-items">
+                            <div class="impact-item">
+                                <span class="impact-label">DOW</span>
+                                <span class="impact-value negative">-0.8%</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-label">USD</span>
+                                <span class="impact-value positive">+1.2%</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-label">Bonds</span>
+                                <span class="impact-value negative">-2.1%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Business News Grid -->
+        <section class="news-grid business-grid">
+            <div class="grid-header">
+                <h2>Latest Business News</h2>
+                <div class="sort-options">
+                    <select id="businessSort">
+                        <option value="newest">Newest First</option>
+                        <option value="important">Most Important</option>
+                        <option value="market-moving">Market Moving</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <article class="news-card business-card" data-category="companies">
+                    <div class="card-image">
+                        <img src="../../images/articles/business-1.jpg" alt="Business News">
+                        <span class="category-badge business">Business</span>
+                        <div class="business-category-label companies">Companies</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/business-article-2.html">Amazon Announces Major Workforce Reduction Amid Restructuring</a></h3>
+                        <p class="excerpt">The e-commerce giant will cut 9,000 jobs primarily in AWS, Twitch, and advertising divisions, citing economic uncertainty and the need to streamline operations.</p>
+                        <div class="article-meta">
+                            <span class="author">By Sarah Williams</span>
+                            <span class="date">5 hours ago</span>
+                        </div>
+                        <div class="stock-info">
+                            <span class="stock-ticker">AMZN</span>
+                            <span class="stock-price">$98.45</span>
+                            <span class="stock-change negative">-3.2%</span>
+                        </div>
+                    </div>
+                    <div class="business-hover-content">
+                        <h4>Key Details:</h4>
+                        <ul>
+                            <li>9,000 jobs affected (3% of workforce)</li>
+                            <li>Second round of cuts this year</li>
+                            <li>Focus on high-cost divisions</li>
+                            <li>Severance packages offered</li>
+                        </ul>
+                        <a href="#" class="read-analysis">Read Analysis →</a>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="news-card business-card" data-category="economy">
+                    <div class="card-image">
+                        <img src="../../images/articles/business-2.jpg" alt="Business News">
+                        <span class="category-badge business">Business</span>
+                        <div class="business-category-label economy">Economy</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/business-article-3.html">Inflation Cools to 4.9% in April, Lowest Level in 2 Years</a></h3>
+                        <p class="excerpt">The Consumer Price Index rose 4.9% year-over-year in April, down from 5% in March, signaling potential relief for consumers but still above Fed targets.</p>
+                        <div class="article-meta">
+                            <span class="author">By Michael Chen</span>
+                            <span class="date">8 hours ago</span>
+                        </div>
+                        <div class="economic-indicator">
+                            <span class="indicator-label">CPI</span>
+                            <span class="indicator-value">4.9%</span>
+                            <span class="indicator-change negative">-0.1%</span>
+                        </div>
+                    </div>
+                    <div class="business-hover-content">
+                        <h4>Key Metrics:</h4>
+                        <ul>
+                            <li>Core CPI: 5.5% (ex-food/energy)</li>
+                            <li>Food prices +7.7% YoY</li>
+                            <li>Housing costs +8.1% YoY</li>
+                            <li>Energy prices -5.1% YoY</li>
+                        </ul>
+                        <a href="#" class="read-analysis">Read Analysis →</a>
+                    </div>
+                </article>
+                
+                <!-- More business articles would follow this pattern -->
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMoreBusiness">Load More Business News</button>
+            </div>
+        </section>
+
+        <!-- Market Data Section -->
+        <section class="market-data">
+            <h2 class="section-title">Market Data</h2>
+            <div class="data-container">
+                <div class="market-index">
+                    <h3>Major Indices</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Value</th>
+                                <th>Change</th>
+                                <th>% Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dow Jones</td>
+                                <td>34,256.12</td>
+                                <td class="positive">+124.56</td>
+                                <td class="positive">+1.24%</td>
+                            </tr>
+                            <tr>
+                                <td>S&P 500</td>
+                                <td>4,345.67</td>
+                                <td class="positive">+38.23</td>
+                                <td class="positive">+0.89%</td>
+                            </tr>
+                            <tr>
+                                <td>NASDAQ</td>
+                                <td>13,789.34</td>
+                                <td class="negative">-44.12</td>
+                                <td class="negative">-0.32%</td>
+                            </tr>
+                            <tr>
+                                <td>Russell 2000</td>
+                                <td>1,789.45</td>
+                                <td class="positive">+12.34</td>
+                                <td class="positive">+0.69%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="commodities">
+                    <h3>Commodities</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Commodity</th>
+                                <th>Price</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Crude Oil</td>
+                                <td>$78.45</td>
+                                <td class="positive">+1.65</td>
+                            </tr>
+                            <tr>
+                                <td>Gold</td>
+                                <td>$1,945.60</td>
+                                <td class="negative">-8.70</td>
+                            </tr>
+                            <tr>
+                                <td>Silver</td>
+                                <td>$23.18</td>
+                                <td class="negative">-0.32</td>
+                            </tr>
+                            <tr>
+                                <td>Natural Gas</td>
+                                <td>$2.45</td>
+                                <td class="positive">+0.12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="currencies">
+                    <h3>Currencies</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Pair</th>
+                                <th>Rate</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EUR/USD</td>
+                                <td>1.0924</td>
+                                <td class="negative">-0.0045</td>
+                            </tr>
+                            <tr>
+                                <td>GBP/USD</td>
+                                <td>1.2543</td>
+                                <td class="positive">+0.0012</td>
+                            </tr>
+                            <tr>
+                                <td>USD/JPY</td>
+                                <td>134.56</td>
+                                <td class="positive">+1.23</td>
+                            </tr>
+                            <tr>
+                                <td>USD/CAD</td>
+                                <td>1.3456</td>
+                                <td class="negative">-0.0078</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Spotlight Section -->
+        <section class="business-spotlight">
+            <h2 class="section-title">Company Spotlight</h2>
+            <div class="spotlight-container">
+                <div class="company-profile">
+                    <div class="company-header">
+                        <img src="../../images/business/company-logo-1.png" alt="Company Logo" class="company-logo">
+                        <div class="company-info">
+                            <h3>Tesla Inc.</h3>
+                            <div class="stock-ticker">TSLA</div>
+                        </div>
+                    </div>
+                    <div class="company-stats">
+                        <div class="stat">
+                            <span class="stat-value">$162.34</span>
+                            <span class="stat-label">Current Price</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value negative">-2.45%</span>
+                            <span class="stat-label">Today</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value positive">+18.23%</span>
+                            <span class="stat-label">YTD</span>
+                        </div>
+                    </div>
+                    <div class="company-details">
+                        <h4>Recent Developments</h4>
+                        <ul>
+                            <li>Price cuts across all models</li>
+                            <li>New Gigafactory announced in Mexico</li>
+                            <li>Q1 deliveries beat estimates</li>
+                            <li>Cybertruck production begins</li>
+                        </ul>
+                    </div>
+                    <div class="company-chart">
+                        <canvas id="companyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Business Sidebar -->
+    <aside class="sidebar business-sidebar">
+        <!-- Economic Calendar -->
+        <div class="sidebar-widget economic-calendar">
+            <h3>Economic Calendar</h3>
+            <div class="calendar-item">
+                <div class="calendar-date">
+                    <span class="calendar-day">Today</span>
+                    <span class="calendar-time">10:00 AM</span>
+                </div>
+                <div class="calendar-event">
+                    <h4>Fed Chair Powell Speech</h4>
+                    <p class="calendar-importance high">High Importance</p>
+                </div>
+            </div>
+            <!-- More calendar items -->
+        </div>
+        
+        <!-- Top Gainers/Losers -->
+        <div class="sidebar-widget stock-movers">
+            <div class="movers-header">
+                <h3>Market Movers</h3>
+                <div class="movers-tabs">
+                    <button class="movers-tab active" data-tab="gainers">Gainers</button>
+                    <button class="movers-tab" data-tab="losers">Losers</button>
+                </div>
+            </div>
+            <div class="movers-content">
+                <div class="movers-list gainers-list">
+                    <div class="mover-item">
+                        <span class="mover-symbol">NVDA</span>
+                        <span class="mover-name">Nvidia Corp</span>
+                        <span class="mover-price">$289.45</span>
+                        <span class="mover-change positive">+8.23%</span>
+                    </div>
+                    <!-- More gainers -->
+                </div>
+                <div class="movers-list losers-list" style="display:none">
+                    <div class="mover-item">
+                        <span class="mover-symbol">AMZN</span>
+                        <span class="mover-name">Amazon.com</span>
+                        <span class="mover-price">$98.45</span>
+                        <span class="mover-change negative">-3.20%</span>
+                    </div>
+                    <!-- More losers -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Business Podcast -->
+        <div class="sidebar-widget business-podcast">
+            <h3>Business Podcast</h3>
+            <div class="podcast-episode">
+                <img src="../../images/business/podcast-cover.jpg" alt="Podcast Cover" class="podcast-cover">
+                <div class="podcast-info">
+                    <h4>Market Watch Daily</h4>
+                    <p class="podcast-title">Fed Rate Decision Analysis</p>
+                    <div class="podcast-controls">
+                        <button class="play-button">Play</button>
+                        <span class="podcast-duration">24:35</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Business Newsletter -->
+        <div class="sidebar-widget business-newsletter">
+            <h3>Financial Digest</h3>
+            <p>Daily market updates to your inbox</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        
+        <!-- Business Advertisement -->
+        <div class="sidebar-widget ad-widget business-ad">
+            <h3>Advertisement</h3>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="../../images/ads/business-ad.jpg" alt="Business Advertisement">
+                <span class="ad-label">Sponsored by WealthFront</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Chart.js for market charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Business-specific JavaScript -->
+    <script src="business.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

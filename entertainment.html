@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment News - Umeskia News</title>
+    <meta name="description" content="Latest celebrity news, movie reviews, music releases and pop culture from Umeskia News">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="entertainment.css">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body class="entertainment-page">
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../../images/logo.png" alt="Umeskia News Logo" class="logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li class="active"><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg><!-- Search icon --></svg>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search entertainment news...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Entertainment Hero with Trending Topics -->
+    <section class="entertainment-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Pop Culture Pulse</h1>
+                <p>Your daily dose of celebrity news, movies, music and TV</p>
+            </div>
+        </div>
+        <div class="trending-topics">
+            <div class="topics-container">
+                <div class="trending-header">
+                    <h3>Trending Now</h3>
+                    <div class="trending-nav">
+                        <button class="trending-nav-btn active" data-category="all">All</button>
+                        <button class="trending-nav-btn" data-category="movies">Movies</button>
+                        <button class="trending-nav-btn" data-category="tv">TV</button>
+                        <button class="trending-nav-btn" data-category="music">Music</button>
+                        <button class="trending-nav-btn" data-category="celebrities">Celebrities</button>
+                    </div>
+                </div>
+                <div class="trending-items">
+                    <a href="#" class="trending-item" data-category="movies">
+                        <span class="trending-rank">1</span>
+                        <span class="trending-text">Barbie movie breaks box office records</span>
+                        <span class="trending-category">Movies</span>
+                    </a>
+                    <!-- More trending items -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entertainment Category Navigation -->
+    <section class="entertainment-categories">
+        <div class="container">
+            <div class="category-nav">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="movies">Movies</button>
+                <button class="category-btn" data-category="tv">TV Shows</button>
+                <button class="category-btn" data-category="music">Music</button>
+                <button class="category-btn" data-category="celebrities">Celebrities</button>
+                <button class="category-btn" data-category="awards">Awards</button>
+                <button class="category-btn" data-category="fashion">Fashion</button>
+                <button class="category-btn" data-category="gaming">Gaming</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container main-content entertainment-main">
+        <!-- Featured Entertainment Article -->
+        <section class="featured-article entertainment-featured">
+            <article>
+                <div class="featured-image">
+                    <img src="../../images/articles/entertainment-featured.jpg" alt="Featured Entertainment News">
+                    <span class="category-badge entertainment">Entertainment</span>
+                    <div class="entertainment-category movies">Movies</div>
+                </div>
+                <div class="featured-content">
+                    <h1><a href="../../article/entertainment-article-1.html">Christopher Nolan's 'Oppenheimer' Premieres to Rave Reviews</a></h1>
+                    <p class="excerpt">The biographical thriller about the father of the atomic bomb earns universal acclaim, with particular praise for Cillian Murphy's lead performance and Nolan's direction.</p>
+                    <div class="article-meta">
+                        <span class="author">By Emma Thompson</span>
+                        <span class="date">4 hours ago</span>
+                        <span class="comments">96 Comments</span>
+                    </div>
+                    <div class="review-info">
+                        <div class="ratings">
+                            <div class="rating-source">
+                                <span class="source">Rotten Tomatoes</span>
+                                <span class="score">94%</span>
+                            </div>
+                            <div class="rating-source">
+                                <span class="source">IMDb</span>
+                                <span class="score">8.9/10</span>
+                            </div>
+                            <div class="rating-source">
+                                <span class="source">Metacritic</span>
+                                <span class="score">89</span>
+                            </div>
+                        </div>
+                        <a href="#" class="watch-trailer">Watch Trailer →</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Entertainment News Grid -->
+        <section class="news-grid entertainment-grid">
+            <div class="grid-header">
+                <h2>Latest Entertainment News</h2>
+                <div class="sort-options">
+                    <select id="entertainmentSort">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <article class="news-card entertainment-card" data-category="music">
+                    <div class="card-image">
+                        <img src="../../images/articles/entertainment-1.jpg" alt="Entertainment News">
+                        <span class="category-badge entertainment">Entertainment</span>
+                        <div class="entertainment-category music">Music</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/entertainment-article-2.html">Taylor Swift Announces '1989 (Taylor's Version)' During LA Concert</a></h3>
+                        <p class="excerpt">The pop superstar surprised fans by revealing the next re-recorded album in her catalog during the final night of her Eras Tour stop in Los Angeles.</p>
+                        <div class="article-meta">
+                            <span class="author">By Michael James</span>
+                            <span class="date">7 hours ago</span>
+                        </div>
+                        <div class="music-meta">
+                            <span class="release-date">Oct 27, 2023</span>
+                            <span class="track-count">5 new tracks</span>
+                        </div>
+                    </div>
+                    <div class="entertainment-hover-content">
+                        <h4>Tracklist Preview:</h4>
+                        <ul>
+                            <li>"Welcome to New York (Taylor's Version)"</li>
+                            <li>"Blank Space (Taylor's Version)"</li>
+                            <li>"Style (Taylor's Version)"</li>
+                            <li>"Out of the Woods (Taylor's Version)"</li>
+                            <li>"New Romantics (Taylor's Version)"</li>
+                        </ul>
+                        <a href="#" class="preview-link">Preview Songs →</a>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="news-card entertainment-card" data-category="tv">
+                    <div class="card-image">
+                        <img src="../../images/articles/entertainment-2.jpg" alt="Entertainment News">
+                        <span class="category-badge entertainment">Entertainment</span>
+                        <div class="entertainment-category tv">TV</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/entertainment-article-3.html">'Succession' Dominates Emmy Nominations With 27 Nods</a></h3>
+                        <p class="excerpt">The HBO drama leads all shows for its final season, while 'The Last of Us' and 'The White Lotus' also score numerous nominations in a competitive year.</p>
+                        <div class="article-meta">
+                            <span class="author">By Sarah Johnson</span>
+                            <span class="date">10 hours ago</span>
+                        </div>
+                        <div class="award-nominations">
+                            <span class="nominations-count">27 Nominations</span>
+                            <span class="categories">Including Best Drama</span>
+                        </div>
+                    </div>
+                    <div class="entertainment-hover-content">
+                        <h4>Major Nominations:</h4>
+                        <ul>
+                            <li>Outstanding Drama Series</li>
+                            <li>3 Lead Actor nominations</li>
+                            <li>2 Supporting Actor nominations</li>
+                            <li>Writing & Directing nods</li>
+                        </ul>
+                        <a href="#" class="full-list-link">See Full List →</a>
+                    </div>
+                </article>
+                
+                <!-- More entertainment articles would follow this pattern -->
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMoreEntertainment">Load More Entertainment News</button>
+            </div>
+        </section>
+
+        <!-- Now Playing Section -->
+        <section class="now-playing">
+            <h2 class="section-title">Now Playing in Theaters</h2>
+            <div class="movies-container">
+                <div class="movie-card">
+                    <img src="../../images/entertainment/movie1.jpg" alt="Movie Poster" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Oppenheimer</h3>
+                        <div class="movie-meta">
+                            <span class="rating">R</span>
+                            <span class="runtime">180 min</span>
+                            <span class="genre">Biography, Drama</span>
+                        </div>
+                        <div class="movie-actions">
+                            <button class="watch-trailer">Trailer</button>
+                            <button class="find-tickets">Tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- More movie cards -->
+            </div>
+        </section>
+
+        <!-- Celebrity Spotlight -->
+        <section class="celebrity-spotlight">
+            <h2 class="section-title">Celebrity Spotlight</h2>
+            <div class="celebrity-profile">
+                <div class="celebrity-image">
+                    <img src="../../images/entertainment/celebrity1.jpg" alt="Celebrity">
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram"></a>
+                        <a href="#" class="social-link twitter"></a>
+                    </div>
+                </div>
+                <div class="celebrity-info">
+                    <h3>Margot Robbie</h3>
+                    <p class="celebrity-bio">Australian actress and producer who rose to fame with 'The Wolf of Wall Street' and recently starred in the blockbuster 'Barbie'.</p>
+                    <div class="upcoming-projects">
+                        <h4>Upcoming Projects:</h4>
+                        <ul>
+                            <li>Ocean's Eleven Prequel (2024)</li>
+                            <li>Barbie Sequel (TBA)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Entertainment Sidebar -->
+    <aside class="sidebar entertainment-sidebar">
+        <!-- Top Videos -->
+        <div class="sidebar-widget top-videos">
+            <h3>Top Videos</h3>
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <img src="../../images/entertainment/video1.jpg" alt="Video Thumbnail">
+                    <div class="play-button">
+                        <svg><!-- Play icon --></svg>
+                    </div>
+                    <span class="video-duration">4:32</span>
+                </div>
+                <div class="video-info">
+                    <h4>Oppenheimer Cast Interviews</h4>
+                    <p class="video-views">1.2M views</p>
+                </div>
+            </div>
+            <!-- More video cards -->
+        </div>
+        
+        <!-- Celebrity News -->
+        <div class="sidebar-widget celebrity-news">
+            <h3>Celebrity News</h3>
+            <div class="celebrity-item">
+                <img src="../../images/entertainment/celebrity2.jpg" alt="Celebrity" class="celebrity-photo">
+                <div class="celebrity-details">
+                    <h4>Tom Cruise Signs New Deal With Warner Bros</h4>
+                    <p class="celebrity-meta">2 hours ago • Movies</p>
+                </div>
+            </div>
+            <!-- More celebrity items -->
+        </div>
+        
+        <!-- Music Releases -->
+        <div class="sidebar-widget new-releases">
+            <h3>New Releases</h3>
+            <div class="release-card">
+                <img src="../../images/entertainment/album1.jpg" alt="Album Cover" class="album-cover">
+                <div class="release-info">
+                    <h4>1989 (Taylor's Version)</h4>
+                    <p class="artist">Taylor Swift</p>
+                    <p class="release-date">Oct 27, 2023</p>
+                    <button class="listen-button">Listen</button>
+                </div>
+            </div>
+            <!-- More release cards -->
+        </div>
+        
+        <!-- Entertainment Poll -->
+        <div class="sidebar-widget entertainment-poll">
+            <h3>Fan Poll</h3>
+            <div class="poll-question">Which summer movie are you most excited for?</div>
+            <div class="poll-options">
+                <div class="poll-option">
+                    <div class="option-info">
+                        <span class="option-name">Barbie</span>
+                        <span class="option-percent">42%</span>
+                    </div>
+                    <div class="poll-bar" style="width: 42%"></div>
+                </div>
+                <!-- More poll options -->
+            </div>
+            <button class="vote-button">Vote Now</button>
+        </div>
+        
+        <!-- Entertainment Advertisement -->
+        <div class="sidebar-widget ad-widget entertainment-ad">
+            <h3>Advertisement</h3>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="../../images/ads/entertainment-ad.jpg" alt="Entertainment Advertisement">
+                <span class="ad-label">Sponsored by Netflix</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Entertainment-specific JavaScript -->
+    <script src="entertainment.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology News - Umeskia News</title>
+    <meta name="description" content="Latest tech news, gadget reviews, AI developments, and innovation updates from Umeskia News">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="technology.css">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body class="technology-page">
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../../images/logo.png" alt="Umeskia News Logo" class="logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li class="active"><a href="technology.html">Technology</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg><!-- Search icon --></svg>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search tech news...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tech News Hero with Animated Background -->
+    <section class="tech-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tech Frontier</h1>
+                <p>Breaking news from the world of innovation, gadgets, and digital transformation</p>
+                <div class="tech-ticker">
+                    <div class="ticker-item">• AI Breakthroughs •</div>
+                    <div class="ticker-item">• Gadget Launches •</div>
+                    <div class="ticker-item">• Cybersecurity Alerts •</div>
+                    <div class="ticker-item">• Startup News •</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-circuit-overlay"></div>
+        <div class="hero-particles"></div>
+    </section>
+
+    <!-- Tech Category Chips -->
+    <section class="tech-categories">
+        <div class="container">
+            <div class="category-chips">
+                <button class="category-chip active" data-category="all">All Tech</button>
+                <button class="category-chip" data-category="ai">Artificial Intelligence</button>
+                <button class="category-chip" data-category="gadgets">Gadgets</button>
+                <button class="category-chip" data-category="cybersecurity">Cybersecurity</button>
+                <button class="category-chip" data-category="startups">Startups</button>
+                <button class="category-chip" data-category="software">Software</button>
+                <button class="category-chip" data-category="blockchain">Blockchain</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container main-content tech-main">
+        <!-- Featured Tech Article -->
+        <section class="featured-article tech-featured">
+            <article>
+                <div class="featured-image">
+                    <img src="../../images/articles/tech-featured.jpg" alt="Featured Tech News">
+                    <span class="category-badge technology">Technology</span>
+                    <div class="tech-category-label ai">AI</div>
+                </div>
+                <div class="featured-content">
+                    <h1><a href="../../article/tech-article-1.html">GPT-5 Announcement: OpenAI Reveals Next-Gen AI with Human-Level Reasoning</a></h1>
+                    <p class="excerpt">OpenAI has unveiled GPT-5, claiming it demonstrates human-like reasoning abilities in preliminary tests. The new model shows significant improvements in complex problem-solving and contextual understanding.</p>
+                    <div class="article-meta">
+                        <span class="author">By Sarah Chen</span>
+                        <span class="date">2 hours ago</span>
+                        <span class="comments">87 Comments</span>
+                    </div>
+                    <div class="tech-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">94%</span>
+                            <span class="stat-label">Accuracy</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">10x</span>
+                            <span class="stat-label">Faster</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">Q3 2024</span>
+                            <span class="stat-label">Release</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Tech News Grid -->
+        <section class="news-grid tech-grid">
+            <div class="grid-header">
+                <h2>Latest Tech News</h2>
+                <div class="sort-options">
+                    <select id="techSort">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <article class="news-card tech-card" data-category="gadgets">
+                    <div class="card-image">
+                        <img src="../../images/articles/tech-1.jpg" alt="Tech News">
+                        <span class="category-badge technology">Technology</span>
+                        <div class="tech-category-label gadgets">Gadgets</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/tech-article-2.html">Apple Unveils Vision Pro 2 with Revolutionary Neural Interface</a></h3>
+                        <p class="excerpt">The next-generation AR headset features direct neural input technology that interprets subtle facial muscle movements for control, eliminating the need for hand gestures.</p>
+                        <div class="article-meta">
+                            <span class="author">By Michael Park</span>
+                            <span class="date">5 hours ago</span>
+                        </div>
+                        <div class="tech-meta">
+                            <span class="price">$1,999</span>
+                            <span class="release">Pre-order now</span>
+                        </div>
+                    </div>
+                    <div class="tech-hover-content">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li>4K micro-OLED displays</li>
+                            <li>Neural input system</li>
+                            <li>8-hour battery life</li>
+                            <li>M3 Ultra chip</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="news-card tech-card" data-category="cybersecurity">
+                    <div class="card-image">
+                        <img src="../../images/articles/tech-2.jpg" alt="Tech News">
+                        <span class="category-badge technology">Technology</span>
+                        <div class="tech-category-label cybersecurity">Security</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/tech-article-3.html">Major Zero-Day Exploit Affects All Windows Versions</a></h3>
+                        <p class="excerpt">Microsoft has issued an emergency patch for a critical vulnerability that allowed attackers to bypass all security measures through a flaw in the Windows Kernel.</p>
+                        <div class="article-meta">
+                            <span class="author">By David Kim</span>
+                            <span class="date">8 hours ago</span>
+                        </div>
+                        <div class="severity-indicator critical">Critical</div>
+                    </div>
+                    <div class="tech-hover-content">
+                        <h4>Affected Systems:</h4>
+                        <ul>
+                            <li>Windows 10</li>
+                            <li>Windows 11</li>
+                            <li>Windows Server</li>
+                        </ul>
+                        <a href="#" class="patch-link">Download Patch →</a>
+                    </div>
+                </article>
+                
+                <!-- More tech articles would follow this pattern -->
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMoreTech">Load More Tech News</button>
+            </div>
+        </section>
+
+        <!-- Tech Comparison Section -->
+        <section class="tech-comparison">
+            <h2 class="section-title">Head-to-Head: Flagship Phones 2024</h2>
+            <div class="comparison-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>iPhone 16 Pro</th>
+                            <th>Galaxy S24 Ultra</th>
+                            <th>Pixel 9 Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Price</td>
+                            <td>$1,099</td>
+                            <td>$1,199</td>
+                            <td>$999</td>
+                        </tr>
+                        <tr>
+                            <td>Display</td>
+                            <td>6.7" Super Retina XDR</td>
+                            <td>6.8" Dynamic AMOLED 2X</td>
+                            <td>6.7" LTPO OLED</td>
+                        </tr>
+                        <tr>
+                            <td>Chipset</td>
+                            <td>A18 Pro</td>
+                            <td>Snapdragon 8 Gen 3</td>
+                            <td>Tensor G4</td>
+                        </tr>
+                        <tr>
+                            <td>Battery</td>
+                            <td>4,500mAh</td>
+                            <td>5,000mAh</td>
+                            <td>4,800mAh</td>
+                        </tr>
+                        <tr>
+                            <td>Camera</td>
+                            <td>Triple 48MP</td>
+                            <td>Quad 200MP</td>
+                            <td>Triple 50MP</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="comparison-chart">
+                    <canvas id="phoneComparisonChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Tech Events -->
+        <section class="tech-events">
+            <h2 class="section-title">Upcoming Tech Events</h2>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Apple WWDC 2024</h3>
+                        <p class="event-location">Online & Cupertino, CA</p>
+                        <p class="event-desc">Annual developer conference showcasing iOS 18, macOS 15, and new hardware.</p>
+                        <a href="#" class="event-link">Learn More →</a>
+                    </div>
+                </div>
+                <!-- More event cards -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Tech Sidebar -->
+    <aside class="sidebar tech-sidebar">
+        <!-- Trending Technologies -->
+        <div class="sidebar-widget trending-tech">
+            <h3>Trending Technologies</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <span class="tech-rank">1</span>
+                    <div class="tech-info">
+                        <h4>Generative AI</h4>
+                        <div class="tech-trend up">+32% interest</div>
+                    </div>
+                </div>
+                <!-- More tech items -->
+            </div>
+        </div>
+        
+        <!-- Quick Tech News -->
+        <div class="sidebar-widget quick-tech-news">
+            <h3>Tech Brief</h3>
+            <div class="quick-news-item">
+                <span class="news-time">10:45 AM</span>
+                <p>Google announces Gemini 2.0 with multimodal capabilities</p>
+            </div>
+            <!-- More quick news items -->
+        </div>
+        
+        <!-- Tech Deal of the Day -->
+        <div class="sidebar-widget tech-deal">
+            <h3>Deal of the Day</h3>
+            <div class="deal-card">
+                <img src="../../images/tech/deal-product.jpg" alt="Deal Product">
+                <div class="deal-info">
+                    <h4>MacBook Air M3</h4>
+                    <div class="deal-price">
+                        <span class="current-price">$999</span>
+                        <span class="original-price">$1,199</span>
+                        <span class="discount">17% off</span>
+                    </div>
+                    <a href="#" class="deal-link">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Developer Corner -->
+        <div class="sidebar-widget developer-corner">
+            <h3>Developer Corner</h3>
+            <div class="code-snippet">
+                <pre><code class="language-javascript">// Sample AI function
+function analyzeSentiment(text) {
+  const response = await fetch('https://api.ai-service.com/sentiment', {
+    method: 'POST',
+    body: JSON.stringify({ text }),
+    headers: { 'Content-Type': 'application/json' }
+  });
+  return await response.json();
+}</code></pre>
+                <button class="copy-code">Copy Code</button>
+            </div>
+        </div>
+        
+        <!-- Tech Advertisement -->
+        <div class="sidebar-widget ad-widget tech-ad">
+            <h3>Advertisement</h3>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="../../images/ads/tech-ad.jpg" alt="Tech Advertisement">
+                <span class="ad-label">Sponsored by TechSolutions Inc.</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Chart.js for comparison charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Technology-specific JavaScript -->
+    <script src="technology.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News - Umeskia News</title>
+    <meta name="description" content="Latest sports news, scores, highlights and analysis from Umeskia News">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../../images/favicon.ico">
+</head>
+<body class="sports-page">
+    <!-- Header with Navigation -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../../images/logo.png" alt="Umeskia News Logo" class="logo">
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="politics.html">Politics</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li class="active"><a href="sports.html">Sports</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="search-toggle" aria-label="Search">
+                    <svg><!-- Search icon --></svg>
+                </button>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search sports news...">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sports Hero with Live Scores -->
+    <section class="sports-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Sports Center</h1>
+                <p>Breaking news, live scores, and in-depth analysis</p>
+            </div>
+        </div>
+        <div class="live-scores">
+            <div class="scoreboard">
+                <div class="scoreboard-header">
+                    <h3>Live Scores</h3>
+                    <div class="sport-selector">
+                        <button class="sport-btn active" data-sport="all">All</button>
+                        <button class="sport-btn" data-sport="football">Football</button>
+                        <button class="sport-btn" data-sport="basketball">Basketball</button>
+                        <button class="sport-btn" data-sport="tennis">Tennis</button>
+                        <button class="sport-btn" data-sport="baseball">Baseball</button>
+                    </div>
+                </div>
+                <div class="games-container">
+                    <div class="game-card" data-sport="football">
+                        <div class="teams">
+                            <div class="team">
+                                <img src="../../images/sports/team1.png" alt="Team Logo" class="team-logo">
+                                <span class="team-name">Arsenal</span>
+                            </div>
+                            <div class="score">
+                                <span class="live-badge">LIVE</span>
+                                <span class="game-score">2 - 1</span>
+                                <span class="game-time">72'</span>
+                            </div>
+                            <div class="team">
+                                <img src="../../images/sports/team2.png" alt="Team Logo" class="team-logo">
+                                <span class="team-name">Chelsea</span>
+                            </div>
+                        </div>
+                        <div class="game-info">
+                            <span class="league">Premier League</span>
+                            <span class="venue">Emirates Stadium</span>
+                        </div>
+                    </div>
+                    <!-- More live game cards -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sports Category Navigation -->
+    <section class="sports-categories">
+        <div class="container">
+            <div class="sport-nav">
+                <button class="sport-nav-btn active" data-sport="all">All Sports</button>
+                <button class="sport-nav-btn" data-sport="football">Football</button>
+                <button class="sport-nav-btn" data-sport="basketball">Basketball</button>
+                <button class="sport-nav-btn" data-sport="tennis">Tennis</button>
+                <button class="sport-nav-btn" data-sport="baseball">Baseball</button>
+                <button class="sport-nav-btn" data-sport="athletics">Athletics</button>
+                <button class="sport-nav-btn" data-sport="golf">Golf</button>
+                <button class="sport-nav-btn" data-sport="motorsport">Motorsport</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="container main-content sports-main">
+        <!-- Featured Sports Article -->
+        <section class="featured-article sports-featured">
+            <article>
+                <div class="featured-image">
+                    <img src="../../images/articles/sports-featured.jpg" alt="Featured Sports News">
+                    <span class="category-badge sports">Sports</span>
+                    <div class="sport-label football">Football</div>
+                </div>
+                <div class="featured-content">
+                    <h1><a href="../../article/sports-article-1.html">Manchester City Wins Champions League in Dramatic Final Against Inter Milan</a></h1>
+                    <p class="excerpt">Rodri's 68th-minute strike secured Manchester City's first Champions League title, completing a historic treble for Pep Guardiola's side in a tense final in Istanbul.</p>
+                    <div class="article-meta">
+                        <span class="author">By James Wilson</span>
+                        <span class="date">5 hours ago</span>
+                        <span class="comments">128 Comments</span>
+                    </div>
+                    <div class="match-stats">
+                        <div class="teams">
+                            <div class="team">
+                                <img src="../../images/sports/team3.png" alt="Team Logo" class="team-logo">
+                                <span class="team-name">Man City</span>
+                            </div>
+                            <div class="score">
+                                <span class="final-score">1 - 0</span>
+                                <span class="match-status">FT</span>
+                            </div>
+                            <div class="team">
+                                <img src="../../images/sports/team4.png" alt="Team Logo" class="team-logo">
+                                <span class="team-name">Inter</span>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-value">62%</span>
+                                <span class="stat-label">Possession</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">14</span>
+                                <span class="stat-label">Shots</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">On Target</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sports News Grid -->
+        <section class="news-grid sports-grid">
+            <div class="grid-header">
+                <h2>Latest Sports News</h2>
+                <div class="sort-options">
+                    <select id="sportsSort">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                        <option value="trending">Trending</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Article 1 -->
+                <article class="news-card sports-card" data-sport="basketball">
+                    <div class="card-image">
+                        <img src="../../images/articles/sports-1.jpg" alt="Sports News">
+                        <span class="category-badge sports">Sports</span>
+                        <div class="sport-label basketball">Basketball</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/sports-article-2.html">Nuggets Claim First NBA Title Behind Jokic's Historic Playoff Run</a></h3>
+                        <p class="excerpt">Nikola Jokic capped off an incredible postseason with 28 points, 16 rebounds and 4 assists as Denver defeated Miami 94-89 in Game 5 to win the franchise's first championship.</p>
+                        <div class="article-meta">
+                            <span class="author">By Marcus Thompson</span>
+                            <span class="date">8 hours ago</span>
+                        </div>
+                        <div class="series-info">
+                            <span class="series">NBA Finals</span>
+                            <span class="series-score">DEN 4-1 MIA</span>
+                        </div>
+                    </div>
+                    <div class="sports-hover-content">
+                        <h4>Key Stats:</h4>
+                        <ul>
+                            <li>Jokic: 28 PTS, 16 REB, 4 AST</li>
+                            <li>Murray: 14 PTS, 8 REB, 8 AST</li>
+                            <li>Butler: 21 PTS, 5 AST</li>
+                            <li>Denver shoots 45% from field</li>
+                        </ul>
+                        <a href="#" class="watch-highlights">Watch Highlights →</a>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="news-card sports-card" data-sport="tennis">
+                    <div class="card-image">
+                        <img src="../../images/articles/sports-2.jpg" alt="Sports News">
+                        <span class="category-badge sports">Sports</span>
+                        <div class="sport-label tennis">Tennis</div>
+                    </div>
+                    <div class="card-content">
+                        <h3><a href="../../article/sports-article-3.html">Djokovic Wins Record 23rd Grand Slam at French Open</a></h3>
+                        <p class="excerpt">Novak Djokovic made history at Roland Garros, defeating Casper Ruud in straight sets to claim his 23rd Grand Slam title, surpassing Rafael Nadal for the men's record.</p>
+                        <div class="article-meta">
+                            <span class="author">By Claire Rutherford</span>
+                            <span class="date">12 hours ago</span>
+                        </div>
+                        <div class="match-result">
+                            <span class="player">Djokovic</span>
+                            <span class="score">7-6 6-3 7-5</span>
+                            <span class="player">Ruud</span>
+                        </div>
+                    </div>
+                    <div class="sports-hover-content">
+                        <h4>Match Stats:</h4>
+                        <ul>
+                            <li>Aces: Djokovic 6-3 Ruud</li>
+                            <li>Winners: 38-31</li>
+                            <li>Unforced Errors: 23-35</li>
+                            <li>Break Points: 3/7 - 1/4</li>
+                        </ul>
+                        <a href="#" class="watch-highlights">Watch Highlights →</a>
+                    </div>
+                </article>
+                
+                <!-- More sports articles would follow this pattern -->
+            </div>
+            
+            <div class="load-more">
+                <button id="loadMoreSports">Load More Sports News</button>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="upcoming-events">
+            <h2 class="section-title">Upcoming Events</h2>
+            <div class="events-container">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">JUN</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>UEFA Champions League Final</h3>
+                        <p class="event-teams">Manchester City vs Inter Milan</p>
+                        <p class="event-time">20:00 GMT • Atatürk Olympic Stadium</p>
+                        <a href="#" class="event-link">More Info →</a>
+                    </div>
+                </div>
+                <!-- More event cards -->
+            </div>
+        </section>
+
+        <!-- Standings Section -->
+        <section class="standings-section">
+            <h2 class="section-title">League Standings</h2>
+            <div class="standings-tabs">
+                <button class="standings-tab active" data-league="premier-league">Premier League</button>
+                <button class="standings-tab" data-league="nba">NBA</button>
+                <button class="standings-tab" data-league="mlb">MLB</button>
+            </div>
+            <div class="standings-container">
+                <table class="standings-table premier-league-standings">
+                    <thead>
+                        <tr>
+                            <th>Pos</th>
+                            <th>Team</th>
+                            <th>P</th>
+                            <th>W</th>
+                            <th>D</th>
+                            <th>L</th>
+                            <th>GD</th>
+                            <th>Pts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="team-cell">
+                                <img src="../../images/sports/team3.png" alt="Team Logo" class="team-logo">
+                                <span>Man City</span>
+                            </td>
+                            <td>38</td>
+                            <td>28</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>+61</td>
+                            <td>89</td>
+                        </tr>
+                        <!-- More teams -->
+                    </tbody>
+                </table>
+                <!-- Other league tables would be here but hidden initially -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Sports Sidebar -->
+    <aside class="sidebar sports-sidebar">
+        <!-- Top Stories -->
+        <div class="sidebar-widget top-stories">
+            <h3>Top Stories</h3>
+            <div class="story-card">
+                <img src="../../images/sports/story1.jpg" alt="Top Story" class="story-image">
+                <div class="story-content">
+                    <h4><a href="#">Messi Confirms Move to Inter Miami</a></h4>
+                    <p class="story-meta">Football • 3 hours ago</p>
+                </div>
+            </div>
+            <!-- More story cards -->
+        </div>
+        
+        <!-- Video Highlights -->
+        <div class="sidebar-widget video-highlights">
+            <h3>Video Highlights</h3>
+            <div class="video-thumbnail">
+                <img src="../../images/sports/video1.jpg" alt="Video Thumbnail" class="thumbnail-image">
+                <div class="play-button">
+                    <svg><!-- Play icon --></svg>
+                </div>
+                <div class="video-info">
+                    <h4>Champions League Final Highlights</h4>
+                    <p class="video-duration">8:24</p>
+                </div>
+            </div>
+            <!-- More video thumbnails -->
+        </div>
+        
+        <!-- Player of the Day -->
+        <div class="sidebar-widget player-spotlight">
+            <h3>Player of the Day</h3>
+            <div class="player-card">
+                <img src="../../images/sports/player1.jpg" alt="Player" class="player-image">
+                <div class="player-info">
+                    <h4>Erling Haaland</h4>
+                    <p class="player-team">Manchester City</p>
+                    <div class="player-stats">
+                        <div class="stat">
+                            <span class="stat-value">36</span>
+                            <span class="stat-label">Goals</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">8</span>
+                            <span class="stat-label">Assists</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sports Poll -->
+        <div class="sidebar-widget sports-poll">
+            <h3>Today's Poll</h3>
+            <div class="poll-question">Who will win the NBA Finals next year?</div>
+            <div class="poll-options">
+                <div class="poll-option">
+                    <div class="option-info">
+                        <span class="option-name">Denver Nuggets</span>
+                        <span class="option-percent">42%</span>
+                    </div>
+                    <div class="poll-bar" style="width: 42%"></div>
+                </div>
+                <!-- More poll options -->
+            </div>
+            <button class="vote-button">Vote Now</button>
+        </div>
+        
+        <!-- Sports Advertisement -->
+        <div class="sidebar-widget ad-widget sports-ad">
+            <h3>Advertisement</h3>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="../../images/ads/sports-ad.jpg" alt="Sports Advertisement">
+                <span class="ad-label">Sponsored by Nike</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <!-- Sports-specific JavaScript -->
+    <script src="sports.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

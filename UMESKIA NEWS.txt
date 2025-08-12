@@ -1,0 +1,26 @@
+umeskia-news/
+├── index.html                  # Homepage
+├── about.html                  # About Us page
+├── contact.html                # Contact page
+├── categories/                 # News categories
+│   ├── politics.html
+│   ├── technology.html
+│   ├── business.html
+│   ├── sports.html
+│   └── entertainment.html
+├── article/                    # Individual article pages
+│   ├── sample-article-1.html
+│   └── sample-article-2.html
+├── css/
+│   ├── styles.css              # Main stylesheet
+│   └── responsive.css          # Responsive styles (optional)
+├── js/
+│   └── main.js                 # Main JavaScript file
+├── images/                     # All website images
+│   ├── logo.png
+│   ├── favicon.ico
+│   ├── ads/                    # Advertisement images
+│   └── articles/               # Article featured images
+└── assets/                     # Additional assets
+    ├── fonts/                  # Custom fonts
+    └── icons/                  # SVG icons

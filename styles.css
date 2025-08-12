@@ -1,0 +1,6031 @@
+/* Increase base spacing throughout the site */
+:root {
+    --spacing-unit: 1rem; /* Base unit (change from 0.8rem if needed) */
+    --section-spacing: 3rem; /* Space between sections */
+}
+
+/* Increase body line-height */
+body {
+    line-height: 1.7; /* Was 1.6 */
+}
+
+/* Add more padding to containers */
+.container {
+    padding: 0 2rem; /* Was 0 15px */
+}
+
+/* Increase spacing between articles */
+.news-card {
+    margin-bottom: 2rem; /* Was 1.5rem */
+}
+
+/* Add more padding to cards */
+.card-content {
+    padding: 1.5rem; /* Was 1rem */
+}
+
+
+
+/* Featured article spacing */
+.featured-article {
+    margin-bottom: 3rem; /* Was 40px */
+}
+
+.featured-content {
+    padding: 2rem; /* Was less */
+}
+
+/* Excerpt paragraph spacing */
+.excerpt {
+    margin-bottom: 1.5rem; /* Was 15px */
+    line-height: 1.6;
+}
+
+/* Meta information spacing */
+.article-meta {
+    margin-top: 1.5rem; /* Was less */
+}
+
+.article-meta span {
+    margin-right: 1.2rem; /* Was 15px */
+}
+
+
+
+
+/* Grid container spacing */
+.grid-container {
+    gap: 2rem; /* Was 25px */
+}
+
+/* List view adjustments */
+.grid-container.list-view .news-card {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+
+
+
+/* Sidebar widget spacing */
+.sidebar-widget {
+    padding: 1.8rem; /* Was 20px */
+    margin-bottom: 2.5rem; /* Was 25px */
+}
+
+/* Widget title spacing */
+.sidebar-widget h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+/* Form element spacing */
+.newsletter-form input,
+.newsletter-form button {
+    padding: 0.8rem 1rem; /* Was tighter */
+    margin-bottom: 1rem;
+}
+
+
+
+/* Footer columns spacing */
+.footer-columns {
+    gap: 3rem; /* Was 30px */
+    padding: 3rem 0; /* Added more vertical padding */
+}
+
+/* Footer links spacing */
+.footer-column ul li {
+    margin-bottom: 0.8rem; /* Was 10px */
+    padding: 0.3rem 0;
+}
+
+
+
+@media (max-width: 768px) {
+    /* Increase mobile spacing */
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .featured-article article {
+        gap: 2rem;
+    }
+    
+    .main-content, .sidebar {
+        padding-top: 2rem;
+    }
+    
+    /* Stack elements with more space */
+    .article-meta span {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+
+
+
+/* tech-specific.css additions */
+
+/* Comparison table spacing */
+.comparison-table th, 
+.comparison-table td {
+    padding: 1rem 1.5rem; /* Was 12px 15px */
+}
+
+/* Tech stats spacing */
+.tech-stats {
+    gap: 1.5rem; /* Was 15px */
+    margin-top: 2rem;
+}
+
+.stat-item {
+    padding: 1rem 1.5rem;
+}
+
+/* Event card spacing */
+.event-info {
+    padding: 1.5rem;
+}
+
+/* Hover content spacing */
+.tech-hover-content {
+    padding: 1.8rem;
+}
+
+.tech-hover-content li {
+    padding: 0.6rem 0;
+}
+
+
+
+
+
+/* politics.css additions */
+
+/* Debate section spacing */
+.debate-sides {
+    gap: 3rem; /* Was 30px */
+}
+
+.debate-side {
+    padding: 2rem;
+}
+
+.debate-points li {
+    padding: 0.8rem 0;
+}
+
+/* Poll widget spacing */
+.poll-option {
+    margin-bottom: 1.2rem;
+}
+
+.poll-results {
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+/* Base Styles & Variables */
+:root {
+    --primary-color: #d32f2f; /* Red */
+    --secondary-color: #212121; /* Dark gray/black */
+    --accent-color: #f5f5f5; /* Light gray/white */
+    --text-color: #333;
+    --light-text: #fff;
+    --border-color: #e0e0e0;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+     /* Reduce overall height */
+    min-height: -40px; /* Adjust this value as needed */
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--light-text);
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.search-toggle {
+    background: none;
+    border: none;
+    color: var(--light-text);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.search-bar {
+    display: none;
+    margin-left: 15px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--light-text);
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    padding: 0;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--light-text);
+    transition: var(--transition);
+}
+
+/* Breaking News Ticker */
+.breaking-news {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.breaking-label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.ticker-content {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    padding: 30px 0;
+}
+
+.featured-article {
+    margin-bottom: 40px;
+}
+
+.featured-article article {
+    display: flex;
+    gap: 30px;
+}
+
+.featured-image {
+    flex: 1;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.featured-content {
+    flex: 1;
+}
+
+.featured-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.featured-content h1 a {
+    color: var(--secondary-color);
+}
+
+.featured-content h1 a:hover {
+    color: var(--primary-color);
+}
+
+.excerpt {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.article-meta span {
+    margin-right: 15px;
+}
+
+.category-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--light-text);
+}
+
+.category-badge.politics {
+    background-color: #1976d2;
+}
+
+.category-badge.technology {
+    background-color: #388e3c;
+}
+
+.category-badge.business {
+    background-color: #f57c00;
+}
+
+.category-badge.sports {
+    background-color: #0288d1;
+}
+
+.category-badge.entertainment {
+    background-color: #7b1fa2;
+}
+
+/* News Grid */
+.news-grid {
+    flex: 2;
+}
+
+.grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.view-options button {
+    background: none;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #777;
+    font-weight: 500;
+}
+
+.view-options button.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.news-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card-content h3 a {
+    color: var(--secondary-color);
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#loadMore {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#loadMore:hover {
+    background-color: #b71c1c;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.sidebar-widget {
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.sidebar-widget h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--secondary-color);
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background-color: #b71c1c;
+}
+
+.ad-widget img {
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+}
+
+.trending-list {
+    list-style: none;
+}
+
+.trending-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.trending-list li:last-child {
+    border-bottom: none;
+}
+
+.trending-rank {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    line-height: 20px;
+}
+
+.trending-title {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 50px 0 20px;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--light-text);
+    font-size: 1.2rem;
+}
+
+.footer-column h4 {
+    color: var(--light-text);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.8rem;
+    color: #bbb;
+}
+
+.footer-nav a {
+    color: #bbb;
+    margin-left: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .featured-article article {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 70px);
+        background-color: var(--secondary-color);
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .main-nav.active {
+        left: 0;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .header-actions {
+        margin-left: auto;
+    }
+    
+    .search-bar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 10px 15px;
+        background-color: var(--secondary-color);
+    }
+    
+    .search-bar.active {
+        display: block;
+    }
+    
+    .footer-columns {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .featured-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Political Page Theme */
+.politics-page {
+    --primary-color: #1976d2; /* Blue */
+    --secondary-color: #0d47a1; /* Darker blue */
+    --accent-color: #bbdefb; /* Light blue */
+    --democrat-color: #2196f3;
+    --republican-color: #f44336;
+    --independent-color: #9e9e9e;
+    --green-color: #4caf50;
+    --libertarian-color: #ffc107;
+}
+
+/* Political Hero Banner */
+.political-hero {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(rgba(25, 118, 210, 0.8), rgba(13, 71, 161, 0.9)), 
+                url('../../images/politics/hero-bg.jpg') center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.political-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    animation: fadeInUp 1s ease;
+}
+
+.political-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.political-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Election Countdown */
+.election-countdown {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease;
+}
+
+.election-countdown h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.countdown-timer {
+    display: flex;
+    gap: 15px;
+}
+
+.countdown-item {
+    text-align: center;
+    flex: 1;
+}
+
+.countdown-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    animation: pulse 2s infinite;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Party Tabs */
+.party-tabs-section {
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.party-tabs {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    padding-bottom: 5px;
+}
+
+.party-tab {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+}
+
+.party-tab.active {
+    background-color: white;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.party-tab[data-party="democrat"]:hover {
+    background-color: var(--democrat-color);
+    color: white;
+}
+
+.party-tab[data-party="republican"]:hover {
+    background-color: var(--republican-color);
+    color: white;
+}
+
+.party-tab[data-party="independent"]:hover {
+    background-color: var(--independent-color);
+    color: white;
+}
+
+.party-tab[data-party="green"]:hover {
+    background-color: var(--green-color);
+    color: white;
+}
+
+.party-tab[data-party="libertarian"]:hover {
+    background-color: var(--libertarian-color);
+    color: #333;
+}
+
+/* Party Affiliation Badges */
+.party-affiliation {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.party-affiliation.democrat {
+    background-color: var(--democrat-color);
+}
+
+.party-affiliation.republican {
+    background-color: var(--republican-color);
+}
+
+.party-affiliation.independent {
+    background-color: var(--independent-color);
+}
+
+.party-affiliation.green {
+    background-color: var(--green-color);
+}
+
+.party-affiliation.libertarian {
+    background-color: var(--libertarian-color);
+    color: #333;
+}
+
+/* Sentiment Meter */
+.sentiment-meter {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.sentiment-label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.meter-bar {
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+.meter-fill {
+    height: 100%;
+}
+
+.meter-fill.positive {
+    background-color: #4caf50;
+}
+
+.meter-fill.negative {
+    background-color: #f44336;
+}
+
+.meter-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Vote Tracker */
+.vote-tracker {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.vote-for, .vote-against {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.vote-for {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+.vote-against {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+/* Poll Data */
+.poll-data {
+    margin-top: 15px;
+}
+
+.poll-bar {
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    margin-top: 5px;
+}
+
+.poll-fill {
+    height: 100%;
+    color: white;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+}
+
+.poll-fill.democrat {
+    background-color: var(--democrat-color);
+}
+
+.poll-fill.republican {
+    background-color: var(--republican-color);
+}
+
+.poll-fill.other {
+    background-color: var(--independent-color);
+}
+
+/* Political Debate Section */
+.political-debate {
+    margin: 50px 0;
+    background: linear-gradient(to right, var(--accent-color) 0%, white 50%, var(--accent-color) 100%);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.debate-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.debate-topic {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.debate-topic h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.debate-sides {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+.debate-side {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.debate-side:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.debate-side.pro {
+    border-top: 5px solid var(--democrat-color);
+}
+
+.debate-side.con {
+    border-top: 5px solid var(--republican-color);
+}
+
+.debater-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.debater-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.debater-header h4 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.debater-title {
+    font-size: 0.9rem;
+    color: #666;
+    display: block;
+}
+
+.debate-points {
+    margin-bottom: 20px;
+}
+
+.debate-points ul {
+    list-style: none;
+}
+
+.debate-points li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.debate-points li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.vs-circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--primary-color);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.vote-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.pro-vote {
+    background-color: var(--democrat-color);
+    color: white;
+}
+
+.pro-vote:hover {
+    background-color: #0d8bf2;
+}
+
+.con-vote {
+    background-color: var(--republican-color);
+    color: white;
+}
+
+.con-vote:hover {
+    background-color: #e53935;
+}
+
+/* Election Map Widget */
+.election-map-widget {
+    position: relative;
+}
+
+.election-map {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+.election-map:hover {
+    transform: scale(1.02);
+}
+
+.map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.legend-item span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.legend-item .democrat {
+    background-color: var(--democrat-color);
+}
+
+.legend-item .republican {
+    background-color: var(--republican-color);
+}
+
+.legend-item .swing {
+    background-color: #ff9800;
+}
+
+.electoral-count {
+    display: flex;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.electoral-democrat, .electoral-republican {
+    flex: 1;
+    padding: 10px;
+}
+
+.electoral-democrat {
+    background-color: rgba(33, 150, 243, 0.1);
+    border-radius: 8px 0 0 8px;
+}
+
+.electoral-republican {
+    background-color: rgba(244, 67, 54, 0.1);
+    border-radius: 0 8px 8px 0;
+}
+
+.electoral-count .count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.electoral-democrat .count {
+    color: var(--democrat-color);
+}
+
+.electoral-republican .count {
+    color: var(--republican-color);
+}
+
+.electoral-count .label {
+    font-size: 0.7rem;
+    color: #666;
+    display: block;
+}
+
+/* Politician Tracker */
+.politician-tracker .tracker-search {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.politician-tracker input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px 0 0 4px;
+}
+
+.politician-tracker button {
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.featured-politicians {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.politician-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.politician-card:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.politician-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.politician-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.party {
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.party.democrat {
+    background-color: var(--democrat-color);
+    color: white;
+}
+
+.party.republican {
+    background-color: var(--republican-color);
+    color: white;
+}
+
+.position {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+}
+
+/* Poll Widget */
+.poll-widget {
+    text-align: center;
+}
+
+.poll-question {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.poll-results {
+    margin-bottom: 15px;
+}
+
+.poll-option {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.poll-label {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+}
+
+.poll-percent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.poll-bar {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.poll-option.approve .poll-bar {
+    background-color: rgba(33, 150, 243, 0.2);
+}
+
+.poll-option.disapprove .poll-bar {
+    background-color: rgba(244, 67, 54, 0.2);
+}
+
+.poll-option.unsure .poll-bar {
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+.poll-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.poll-vote-button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.poll-vote-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Political Ad */
+.political-ad {
+    position: relative;
+}
+
+.political-ad img {
+    border: 1px solid var(--border-color);
+}
+
+.ad-label {
+    display: block;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .political-hero {
+        height: 300px;
+    }
+    
+    .political-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .debate-sides {
+        flex-direction: column;
+    }
+    
+    .vs-circle {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 20px auto;
+    }
+    
+    .countdown-timer {
+        gap: 5px;
+    }
+    
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Technology Page Theme */
+.technology-page {
+    --primary-color: #6200ea; /* Deep purple */
+    --secondary-color: #3700b3; /* Darker purple */
+    --accent-color: #bb86fc; /* Light purple */
+    --ai-color: #00bcd4; /* Teal */
+    --gadgets-color: #ff5722; /* Deep orange */
+    --cybersecurity-color: #f44336; /* Red */
+    --startups-color: #4caf50; /* Green */
+    --software-color: #2196f3; /* Blue */
+    --blockchain-color: #ff9800; /* Orange */
+}
+
+/* Tech Hero with Animated Background */
+.tech-hero {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.tech-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    animation: fadeInUp 1s ease;
+}
+
+.tech-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tech-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.tech-ticker {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: tickerScroll 20s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.hero-circuit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../images/tech/circuit-pattern.png') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: url('../../images/tech/particles.png') center/cover;
+    animation: particlesMove 20s linear infinite;
+}
+
+/* Tech Category Chips */
+.tech-categories {
+    background-color: #f5f5f5;
+    padding: 15px 0;
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.category-chip {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.category-chip.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.category-chip[data-category="ai"]:hover {
+    background-color: var(--ai-color);
+    color: white;
+}
+
+.category-chip[data-category="gadgets"]:hover {
+    background-color: var(--gadgets-color);
+    color: white;
+}
+
+.category-chip[data-category="cybersecurity"]:hover {
+    background-color: var(--cybersecurity-color);
+    color: white;
+}
+
+.category-chip[data-category="startups"]:hover {
+    background-color: var(--startups-color);
+    color: white;
+}
+
+.category-chip[data-category="software"]:hover {
+    background-color: var(--software-color);
+    color: white;
+}
+
+.category-chip[data-category="blockchain"]:hover {
+    background-color: var(--blockchain-color);
+    color: #333;
+}
+
+/* Tech Category Labels */
+.tech-category-label {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.tech-category-label.ai {
+    background-color: var(--ai-color);
+}
+
+.tech-category-label.gadgets {
+    background-color: var(--gadgets-color);
+}
+
+.tech-category-label.cybersecurity {
+    background-color: var(--cybersecurity-color);
+}
+
+.tech-category-label.startups {
+    background-color: var(--startups-color);
+}
+
+.tech-category-label.software {
+    background-color: var(--software-color);
+}
+
+.tech-category-label.blockchain {
+    background-color: var(--blockchain-color);
+    color: #333;
+}
+
+/* Tech Stats */
+.tech-stats {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Tech Meta */
+.tech-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.release {
+    color: #666;
+}
+
+/* Severity Indicator */
+.severity-indicator {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.severity-indicator.critical {
+    background-color: #f44336;
+    color: white;
+}
+
+.severity-indicator.high {
+    background-color: #ff9800;
+    color: #333;
+}
+
+.severity-indicator.medium {
+    background-color: #ffeb3b;
+    color: #333;
+}
+
+.severity-indicator.low {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Tech Hover Content */
+.tech-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-hover-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.tech-card:hover .tech-hover-content {
+    bottom: 0;
+}
+
+.tech-hover-content h4 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.tech-hover-content ul {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.tech-hover-content li {
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 20px;
+}
+
+.tech-hover-content li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+.patch-link {
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+/* Tech Comparison Section */
+.tech-comparison {
+    margin: 50px 0;
+}
+
+.comparison-container {
+    display: flex;
+    gap: 30px;
+}
+
+.comparison-table {
+    flex: 1;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table th, .comparison-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comparison-table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.comparison-table tr:hover {
+    background-color: rgba(98, 0, 234, 0.05);
+}
+
+.comparison-chart {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tech Events */
+.tech-events {
+    margin: 50px 0;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-date {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.event-date .day {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.event-info {
+    padding: 15px;
+    flex: 1;
+}
+
+.event-info h3 {
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.event-location {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.event-desc {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.event-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Trending Technologies Widget */
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tech-rank {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    width: 30px;
+    text-align: center;
+}
+
+.tech-info {
+    flex: 1;
+}
+
+.tech-info h4 {
+    margin-bottom: 3px;
+}
+
+.tech-trend {
+    font-size: 0.8rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.tech-trend.up {
+    background-color: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+}
+
+.tech-trend.down {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+}
+
+/* Quick Tech News */
+.quick-news-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.news-time {
+    font-size: 0.8rem;
+    color: #666;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* Tech Deal */
+.deal-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.deal-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.deal-info {
+    padding: 15px;
+}
+
+.deal-info h4 {
+    margin-bottom: 10px;
+}
+
+.deal-price {
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.original-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #666;
+    margin-left: 5px;
+}
+
+.discount {
+    font-size: 0.8rem;
+    background: #4caf50;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.deal-link {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Developer Corner */
+.code-snippet {
+    position: relative;
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.code-snippet pre {
+    margin: 0;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.code-snippet code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #d4d4d4;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.copy-code {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Tech Ad */
+.tech-ad img {
+    border: 1px solid #e0e0e0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes tickerScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes particlesMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .comparison-container {
+        flex-direction: column;
+    }
+    
+    .tech-hero {
+        height: 350px;
+    }
+    
+    .tech-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-hero {
+        height: 300px;
+    }
+    
+    .tech-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .category-chips {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+    
+    .tech-stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 1 0 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-hero {
+        height: 250px;
+    }
+    
+    .tech-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tech-hero p {
+        font-size: 1rem;
+    }
+    
+    .featured-article article {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Business Page Theme */
+.business-page {
+    --primary-color: #2e7d32; /* Green */
+    --secondary-color: #1b5e20; /* Darker green */
+    --accent-color: #d4edda; /* Light green */
+    --positive-color: #4caf50; /* Green for gains */
+    --negative-color: #f44336; /* Red for losses */
+    --markets-color: #2196f3; /* Blue */
+    --economy-color: #ff9800; /* Orange */
+    --companies-color: #9c27b0; /* Purple */
+}
+
+/* Business Hero with Market Ticker */
+.business-hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 3rem 0 6rem;
+}
+
+.business-hero .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.business-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.business-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.market-ticker {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 0;
+    overflow: hidden;
+}
+
+.ticker-container {
+    display: flex;
+    gap: 2rem;
+    animation: tickerScroll 30s linear infinite;
+}
+
+.ticker-item {
+    display: flex;
+    gap: 0.8rem;
+    white-space: nowrap;
+}
+
+.market-name {
+    font-weight: bold;
+}
+
+.market-value {
+    font-family: 'Courier New', monospace;
+}
+
+.market-change.positive {
+    color: var(--positive-color);
+}
+
+.market-change.negative {
+    color: var(--negative-color);
+}
+
+/* Business Category Navigation */
+.business-categories {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.category-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.category-btn[data-category="markets"]:hover {
+    background-color: var(--markets-color);
+    color: white;
+}
+
+.category-btn[data-category="economy"]:hover {
+    background-color: var(--economy-color);
+    color: white;
+}
+
+.category-btn[data-category="companies"]:hover {
+    background-color: var(--companies-color);
+    color: white;
+}
+
+/* Business Category Labels */
+.business-category-label {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.business-category-label.markets {
+    background-color: var(--markets-color);
+}
+
+.business-category-label.economy {
+    background-color: var(--economy-color);
+}
+
+.business-category-label.companies {
+    background-color: var(--companies-color);
+}
+
+.business-category-label.personal-finance {
+    background-color: #009688;
+}
+
+.business-category-label.startups {
+    background-color: #607d8b;
+}
+
+.business-category-label.trade {
+    background-color: #795548;
+}
+
+/* Market Impact */
+.market-impact {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.market-impact h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.impact-items {
+    display: flex;
+    gap: 1rem;
+}
+
+.impact-item {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.impact-label {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.impact-value {
+    display: block;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+.impact-value.positive {
+    color: var(--positive-color);
+}
+
+.impact-value.negative {
+    color: var(--negative-color);
+}
+
+/* Stock Info */
+.stock-info {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+.stock-ticker {
+    font-weight: bold;
+}
+
+.stock-price {
+    font-weight: bold;
+}
+
+.stock-change.positive {
+    color: var(--positive-color);
+}
+
+.stock-change.negative {
+    color: var(--negative-color);
+}
+
+/* Economic Indicator */
+.economic-indicator {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.indicator-label {
+    font-weight: bold;
+}
+
+.indicator-value {
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+}
+
+.indicator-change.positive {
+    color: var(--positive-color);
+}
+
+.indicator-change.negative {
+    color: var(--negative-color);
+}
+
+/* Business Hover Content */
+.business-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.business-hover-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.business-card:hover .business-hover-content {
+    bottom: 0;
+}
+
+.business-hover-content h4 {
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+}
+
+.business-hover-content ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.business-hover-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.business-hover-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.read-analysis {
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Market Data Section */
+.market-data {
+    margin: 3rem 0;
+}
+
+.data-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.data-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.positive {
+    color: var(--positive-color);
+    font-weight: bold;
+}
+
+.negative {
+    color: var(--negative-color);
+    font-weight: bold;
+}
+
+/* Business Spotlight */
+.business-spotlight {
+    margin: 3rem 0;
+}
+
+.spotlight-container {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-profile {
+    padding: 2rem;
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.company-info h3 {
+    margin-bottom: 0.3rem;
+}
+
+.stock-ticker {
+    background: #e0e0e0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.company-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.stat-value.positive {
+    color: var(--positive-color);
+}
+
+.stat-value.negative {
+    color: var(--negative-color);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.company-details h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.company-details ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.company-details li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.company-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.company-chart {
+    height: 200px;
+    margin-top: 1.5rem;
+}
+
+/* Economic Calendar */
+.calendar-item {
+    padding: 1rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+    display: flex;
+    gap: 1rem;
+}
+
+.calendar-date {
+    min-width: 80px;
+}
+
+.calendar-day {
+    font-weight: bold;
+    display: block;
+}
+
+.calendar-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.calendar-event h4 {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.calendar-importance {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.calendar-importance.high {
+    background-color: #f44336;
+    color: white;
+}
+
+.calendar-importance.medium {
+    background-color: #ff9800;
+    color: #333;
+}
+
+.calendar-importance.low {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Market Movers */
+.movers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.movers-tabs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.movers-tab {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background: #e0e0e0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.movers-tab.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.mover-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.mover-symbol {
+    font-weight: bold;
+    min-width: 50px;
+}
+
+.mover-name {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0.5rem;
+}
+
+.mover-price {
+    font-family: 'Courier New', monospace;
+    min-width: 70px;
+    text-align: right;
+}
+
+.mover-change {
+    min-width: 60px;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+}
+
+.mover-change.positive {
+    color: var(--positive-color);
+}
+
+.mover-change.negative {
+    color: var(--negative-color);
+}
+
+/* Business Podcast */
+.podcast-episode {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.podcast-cover {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.podcast-info {
+    flex: 1;
+}
+
+.podcast-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.podcast-title {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.podcast-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.play-button {
+    padding: 0.3rem 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.podcast-duration {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Business Newsletter */
+.business-newsletter {
+    background: var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.business-newsletter h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.business-newsletter p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes tickerScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .data-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .business-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-hero {
+        padding: 2rem 0 5rem;
+    }
+    
+    .business-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .category-nav {
+        padding-bottom: 0.8rem;
+    }
+    
+    .company-stats {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .stat {
+        flex: 1 0 40%;
+    }
+}
+
+@media (max-width: 480px) {
+    .business-hero {
+        padding: 1.5rem 0 4rem;
+    }
+    
+    .business-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .business-hero p {
+        font-size: 1rem;
+    }
+    
+    .featured-article article {
+        flex-direction: column;
+    }
+    
+    .impact-items {
+        flex-wrap: wrap;
+    }
+    
+    .impact-item {
+        flex: 1 0 40%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sports Page Theme */
+.sports-page {
+    --primary-color: #d32f2f; /* Red */
+    --secondary-color: #b71c1c; /* Darker red */
+    --accent-color: #ffcdd2; /* Light red */
+    --football-color: #d32f2f; /* Red */
+    --basketball-color: #ff5722; /* Orange */
+    --tennis-color: #4caf50; /* Green */
+    --baseball-color: #2196f3; /* Blue */
+    --athletics-color: #9c27b0; /* Purple */
+    --golf-color: #009688; /* Teal */
+    --motorsport-color: #607d8b; /* Blue grey */
+}
+
+/* Sports Hero with Live Scores */
+.sports-hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 3rem 0 8rem;
+}
+
+.sports-hero .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.sports-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sports-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.live-scores {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+}
+
+.scoreboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.scoreboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+}
+
+.scoreboard-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.sport-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sport-btn {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.sport-btn.active {
+    background: white;
+    color: var(--primary-color);
+}
+
+.games-container {
+    padding: 1rem;
+}
+
+.game-card {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.game-card:hover {
+    background: #f9f9f9;
+}
+
+.game-card:last-child {
+    border-bottom: none;
+}
+
+.teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.team:last-child {
+    justify-content: flex-end;
+}
+
+.team-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+}
+
+.team-name {
+    font-weight: 500;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.live-badge {
+    background: #f44336;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.game-score {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.game-time {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Sports Category Navigation */
+.sports-categories {
+    background-color: #f5f5f5;
+    padding: 1rem 0;
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sport-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.sport-nav-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.sport-nav-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="football"]:hover {
+    background-color: var(--football-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="basketball"]:hover {
+    background-color: var(--basketball-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="tennis"]:hover {
+    background-color: var(--tennis-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="baseball"]:hover {
+    background-color: var(--baseball-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="athletics"]:hover {
+    background-color: var(--athletics-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="golf"]:hover {
+    background-color: var(--golf-color);
+    color: white;
+}
+
+.sport-nav-btn[data-sport="motorsport"]:hover {
+    background-color: var(--motorsport-color);
+    color: white;
+}
+
+/* Sport Labels */
+.sport-label {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.sport-label.football {
+    background-color: var(--football-color);
+}
+
+.sport-label.basketball {
+    background-color: var(--basketball-color);
+}
+
+.sport-label.tennis {
+    background-color: var(--tennis-color);
+}
+
+.sport-label.baseball {
+    background-color: var(--baseball-color);
+}
+
+.sport-label.athletics {
+    background-color: var(--athletics-color);
+}
+
+.sport-label.golf {
+    background-color: var(--golf-color);
+}
+
+.sport-label.motorsport {
+    background-color: var(--motorsport-color);
+}
+
+/* Match Stats */
+.match-stats {
+    margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.match-stats .teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.match-stats .team {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.match-stats .team:last-child {
+    justify-content: flex-end;
+}
+
+.match-stats .team-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+}
+
+.match-stats .team-name {
+    font-weight: 500;
+}
+
+.match-stats .score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.final-score {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.match-status {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.match-stats .stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 0.5rem;
+}
+
+.stat-value {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Series Info */
+.series-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.series {
+    font-weight: 500;
+}
+
+.series-score {
+    font-weight: bold;
+}
+
+/* Match Result */
+.match-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.match-result .player {
+    flex: 1;
+}
+
+.match-result .score {
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+/* Sports Hover Content */
+.sports-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.sports-hover-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.sports-card:hover .sports-hover-content {
+    bottom: 0;
+}
+
+.sports-hover-content h4 {
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+}
+
+.sports-hover-content ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.sports-hover-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.sports-hover-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.watch-highlights {
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Upcoming Events */
+.upcoming-events {
+    margin: 3rem 0;
+}
+
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.event-card {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.event-date {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.event-date .day {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.event-info {
+    padding: 1rem;
+    flex: 1;
+}
+
+.event-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.event-teams {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.event-time {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.event-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Standings Section */
+.standings-section {
+    margin: 3rem 0;
+}
+
+.standings-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.standings-tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background: #e0e0e0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.standings-tab.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.standings-table th {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.standings-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.standings-table tr:last-child td {
+    border-bottom: none;
+}
+
+.standings-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.team-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.team-logo {
+    width: 25px;
+    height: 25px;
+}
+
+/* Top Stories Widget */
+.story-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.story-image {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.story-content h4 {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.story-meta {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Video Highlights */
+.video-thumbnail {
+    position: relative;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.video-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    padding: 1rem;
+    color: white;
+}
+
+.video-info h4 {
+    margin-bottom: 0.3rem;
+}
+
+.video-duration {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Player Spotlight */
+.player-card {
+    text-align: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.player-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+.player-info h4 {
+    margin-bottom: 0.3rem;
+}
+
+.player-team {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.player-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.player-stats .stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Sports Poll */
+.poll-question {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.poll-option {
+    margin-bottom: 0.8rem;
+}
+
+.option-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+}
+
+.option-name {
+    font-size: 0.9rem;
+}
+
+.option-percent {
+    font-weight: bold;
+}
+
+.poll-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+
+.poll-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.vote-button {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .sports-hero {
+        padding: 2rem 0 7rem;
+    }
+    
+    .sports-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .standings-table {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sports-hero {
+        padding: 1.5rem 0 6rem;
+    }
+    
+    .sports-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .match-stats .stats {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 1 0 30%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .sport-nav {
+        padding-bottom: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sports-hero {
+        padding: 1rem 0 5rem;
+    }
+    
+    .sports-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .sports-hero p {
+        font-size: 1rem;
+    }
+    
+    .featured-article article {
+        flex-direction: column;
+    }
+    
+    .scoreboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .sport-selector {
+        margin-top: 0.5rem;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .match-result {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .match-result .score {
+        margin: 0.5rem 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Entertainment Page Theme */
+.entertainment-page {
+    --primary-color: #9c27b0; /* Purple */
+    --secondary-color: #7b1fa2; /* Darker purple */
+    --accent-color: #e1bee7; /* Light purple */
+    --movies-color: #d32f2f; /* Red */
+    --tv-color: #1976d2; /* Blue */
+    --music-color: #ff9800; /* Orange */
+    --celebrities-color: #009688; /* Teal */
+    --awards-color: #ffc107; /* Yellow */
+    --fashion-color: #e91e63; /* Pink */
+    --gaming-color: #4caf50; /* Green */
+}
+
+/* Entertainment Hero with Trending Topics */
+.entertainment-hero {
+    position: relative;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 3rem 0 6rem;
+}
+
+.entertainment-hero .hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.entertainment-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.entertainment-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.trending-topics {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+}
+
+.topics-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+}
+
+.trending-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.trending-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.trending-nav-btn {
+    padding: 0.3rem 0.8rem;
+    border: none;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.trending-nav-btn.active {
+    background: white;
+    color: var(--primary-color);
+}
+
+.trending-items {
+    padding: 1rem;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.trending-item:hover {
+    background: #f9f9f9;
+}
+
+.trending-item:last-child {
+    border-bottom: none;
+}
+
+.trending-rank {
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 30px;
+    color: var(--primary-color);
+}
+
+.trending-text {
+    flex: 1;
+    font-weight: 500;
+    padding: 0 1rem;
+}
+
+.trending-category {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    background: #f5f5f5;
+    color: #666;
+}
+
+/* Entertainment Category Navigation */
+.entertainment-categories {
+    background-color: #f5f5f5;
+    padding: 1rem 0;
+    position: sticky;
+    top: 70px;
+    z-index: 900;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-nav {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.category-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.category-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.category-btn[data-category="movies"]:hover {
+    background-color: var(--movies-color);
+    color: white;
+}
+
+.category-btn[data-category="tv"]:hover {
+    background-color: var(--tv-color);
+    color: white;
+}
+
+.category-btn[data-category="music"]:hover {
+    background-color: var(--music-color);
+    color: white;
+}
+
+.category-btn[data-category="celebrities"]:hover {
+    background-color: var(--celebrities-color);
+    color: white;
+}
+
+.category-btn[data-category="awards"]:hover {
+    background-color: var(--awards-color);
+    color: #333;
+}
+
+.category-btn[data-category="fashion"]:hover {
+    background-color: var(--fashion-color);
+    color: white;
+}
+
+.category-btn[data-category="gaming"]:hover {
+    background-color: var(--gaming-color);
+    color: white;
+}
+
+/* Entertainment Category Labels */
+.entertainment-category {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.entertainment-category.movies {
+    background-color: var(--movies-color);
+}
+
+.entertainment-category.tv {
+    background-color: var(--tv-color);
+}
+
+.entertainment-category.music {
+    background-color: var(--music-color);
+}
+
+.entertainment-category.celebrities {
+    background-color: var(--celebrities-color);
+}
+
+.entertainment-category.awards {
+    background-color: var(--awards-color);
+    color: #333;
+}
+
+.entertainment-category.fashion {
+    background-color: var(--fashion-color);
+}
+
+.entertainment-category.gaming {
+    background-color: var(--gaming-color);
+}
+
+/* Review Info */
+.review-info {
+    margin-top: 1.5rem;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.rating-source {
+    text-align: center;
+}
+
+.source {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.score {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.watch-trailer {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.watch-trailer:hover {
+    background: var(--secondary-color);
+}
+
+/* Music Meta */
+.music-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Award Nominations */
+.award-nominations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.nominations-count {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.categories {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Entertainment Hover Content */
+.entertainment-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.entertainment-hover-content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.entertainment-card:hover .entertainment-hover-content {
+    bottom: 0;
+}
+
+.entertainment-hover-content h4 {
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+}
+
+.entertainment-hover-content ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.entertainment-hover-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.entertainment-hover-content li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.preview-link, .full-list-link {
+    display: inline-block;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Now Playing Section */
+.now-playing {
+    margin: 3rem 0;
+}
+
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.movie-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.movie-info {
+    padding: 1rem;
+}
+
+.movie-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.movie-meta {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.movie-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.movie-actions button {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.watch-trailer {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+}
+
+.find-tickets {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Celebrity Spotlight */
+.celebrity-spotlight {
+    margin: 3rem 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.celebrity-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.celebrity-image {
+    position: relative;
+}
+
+.celebrity-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.social-links {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-link {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-link.instagram {
+    background-image: url('../../images/social/instagram.svg');
+}
+
+.social-link.twitter {
+    background-image: url('../../images/social/twitter.svg');
+}
+
+.celebrity-info {
+    padding: 1.5rem;
+}
+
+.celebrity-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.celebrity-bio {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.upcoming-projects h4 {
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.upcoming-projects ul {
+    list-style: none;
+}
+
+.upcoming-projects li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.upcoming-projects li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Top Videos Widget */
+.video-card {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumbnail {
+    position: relative;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.video-info {
+    padding: 0.8rem;
+}
+
+.video-info h4 {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.video-views {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* Celebrity News Widget */
+.celebrity-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.celebrity-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.celebrity-details h4 {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.celebrity-meta {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* New Releases Widget */
+.release-card {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.album-cover {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.release-info h4 {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.artist {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.release-date {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.listen-button {
+    padding: 0.3rem 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* Entertainment Poll */
+.poll-question {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.poll-options {
+    margin-bottom: 1rem;
+}
+
+.poll-option {
+    margin-bottom: 0.5rem;
+}
+
+.option-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+}
+
+.option-name {
+    font-size: 0.9rem;
+}
+
+.option-percent {
+    font-weight: bold;
+}
+
+.poll-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+}
+
+.poll-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.vote-button {
+    width: 100%;
+    padding: 0.6rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .entertainment-hero {
+        padding: 2rem 0 5rem;
+    }
+    
+    .entertainment-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .celebrity-profile {
+        flex-direction: column;
+    }
+    
+    .celebrity-image img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .entertainment-hero {
+        padding: 1.5rem 0 4rem;
+    }
+    
+    .entertainment-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .trending-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .trending-nav {
+        margin-top: 0.5rem;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .ratings {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .rating-source {
+        flex: 1 0 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .entertainment-hero {
+        padding: 1rem 0 3rem;
+    }
+    
+    .entertainment-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .entertainment-hero p {
+        font-size: 1rem;
+    }
+    
+    .featured-article article {
+        flex-direction: column;
+    }
+    
+    .movies-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Page Theme */
+.about-page {
+    --primary-color: #2e7d32; /* Green */
+    --secondary-color: #1b5e20; /* Darker green */
+    --accent-color: #d4edda; /* Light green */
+}
+
+/* About Hero Section */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/about/hero-bg.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero .subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.mission-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.mission-statement {
+    flex: 1;
+}
+
+.mission-statement p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.mission-values {
+    list-style: none;
+}
+
+.mission-values li {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.value-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.value-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
+
+.value-text h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.mission-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* History Section */
+.history-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--accent-color);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.timeline-year {
+    flex: 0 0 100px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    align-self: center;
+}
+
+.timeline-content {
+    flex: 0 0 calc(50% - 70px);
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-left: auto;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    left: -30px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    right: -30px;
+}
+
+.timeline-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+/* Team Section */
+.team-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.team-member {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-image {
+    position: relative;
+}
+
+.member-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.social-links {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+}
+
+.social-links a svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--secondary-color);
+}
+
+.social-links a:hover svg {
+    fill: white;
+}
+
+.member-info {
+    padding: 1.5rem;
+}
+
+.member-info h3 {
+    margin-bottom: 0.3rem;
+    color: var(--secondary-color);
+}
+
+.position {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.bio {
+    color: #555;
+    line-height: 1.6;
+}
+
+.departments {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.department {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dept-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.dept-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--secondary-color);
+}
+
+.department h4 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.department p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Awards Section */
+.awards-section {
+    padding: 5rem 0;
+    background: white;
+}
+
+.awards-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+}
+
+.award {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.award:hover {
+    transform: translateY(-5px);
+}
+
+.award-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.award-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--secondary-color);
+}
+
+.award-info h3 {
+    margin-bottom: 0.3rem;
+    color: var(--secondary-color);
+}
+
+.year {
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.category {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Values Section */
+.values-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.values-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.accordion-header:hover {
+    background: var(--secondary-color);
+}
+
+.accordion-header h3 {
+    margin: 0;
+}
+
+.accordion-header svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-header svg {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.accordion-content p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(rgba(46, 125, 50, 0.9), rgba(27, 94, 32, 0.9)), 
+                url('../images/about/cta-bg.jpg') center/cover;
+    color: white;
+    text-align: center;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta-button {
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+    background: white;
+    color: var(--secondary-color);
+}
+
+.cta-button.primary:hover {
+    background: #f5f5f5;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .mission-content {
+        flex-direction: column;
+    }
+    
+    .mission-image {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    .timeline::before {
+        left: 100px;
+    }
+    
+    .timeline-year {
+        flex: 0 0 80px;
+    }
+    
+    .timeline-content {
+        flex: 1;
+        margin-left: 120px !important;
+    }
+    
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 4rem 0;
+    }
+    
+    .about-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .departments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        padding: 3rem 0;
+    }
+    
+    .about-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-hero .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-year {
+        flex: 0 0 60px;
+        font-size: 1rem;
+    }
+    
+    .timeline-content {
+        margin-left: 70px !important;
+    }
+    
+    .departments {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page Theme */
+.contact-page {
+    --primary-color: #0056b3; /* Blue */
+    --secondary-color: #003d7a; /* Darker blue */
+    --accent-color: #e6f0fa; /* Light blue */
+}
+
+/* Contact Hero Section */
+.contact-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/contact/hero-bg.jpg') center/cover;
+    color: white;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.contact-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-hero .subtitle {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Contact Main Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.checkbox-group input {
+    width: auto;
+}
+
+.submit-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Contact Info Section */
+.contact-info-section {
+    position: relative;
+}
+
+.contact-info-card {
+    position: sticky;
+    top: 2rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-card h2 {
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.contact-method {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-method:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-color);
+}
+
+.contact-details h3 {
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
+
+.contact-details p,
+.contact-details address {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.contact-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.social-media {
+    margin-top: 2rem;
+}
+
+.social-media h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+}
+
+.social-links a svg {
+    width: 20px;
+    height: 20px;
+    fill: #555;
+}
+
+.social-links a:hover svg {
+    fill: white;
+}
+
+/* Department Contacts */
+.department-contacts {
+    margin: 5rem 0;
+}
+
+.department-contacts h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.department-card {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+}
+
+.dept-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.dept-icon svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--primary-color);
+}
+
+.department-card h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.department-card p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.dept-email,
+.dept-phone {
+    display: block;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.dept-email:hover,
+.dept-phone:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Locations Section */
+.locations-section {
+    margin: 5rem 0;
+}
+
+.locations-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.location-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-map {
+    height: 200px;
+    background: #eee;
+    position: relative;
+}
+
+.location-info {
+    padding: 1.5rem;
+}
+
+.location-info h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.location-info address {
+    font-style: normal;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.location-contact p {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.location-contact strong {
+    color: #333;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin: 5rem 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: white;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.faq-question svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question svg {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.faq-answer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info-card {
+        position: static;
+    }
+    
+    .departments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 4rem 0;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .locations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 3rem 0;
+    }
+    
+    .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-hero .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-question {
+        padding: 1rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
